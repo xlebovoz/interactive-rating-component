@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+
+  <style>
+    body {
+      background-color: hsl(216, 12%, 8%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Overpass', sans-serif;
+    }
+
+    p {
+      color: hsl(217, 12%, 63%);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: hsl(0, 100%, 100%);
+      margin-top: 20px;
+    }
+
+    #main {
+      background-color: hsl(216, 24%, 16%);
+      width: 350px;
+      height: 350px;
+      text-align: left;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    #star {
+      border-radius: 50%;
+      background-color: hsl(213, 19%, 18%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+    }
+
+    .ratings {
+      display: flex;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .rate {
+      width: 50px;
+      height: 50px;
+      background-color: hsl(213, 19%, 18%);
+      color: hsl(217, 12%, 63%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-weight: 700;
+
+      transition: background-color 0.3s ease;
+    }
+    .rate:hover {
+      background-color: hsl(25, 97%, 53%);
+      color: black;
+      cursor: pointer;
+    }
+
+    #submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      background-color: hsl(25, 97%, 53%);
+      border-radius: 30px;
+      padding: 15px;
+      margin-top: 30px;
+
+      transition: background-color 0.3s ease;
+    }
+    #submit h3 {
+      margin:0;
+    }
+
+    #submit:hover {
+      background-color: hsl(0, 100%, 100%);
+      cursor: pointer;
+    }
+
+    #end {
+      background-color: hsl(216, 24%, 16%);
+      width: 340px;
+      height: 340px;
+      text-align: center;
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    #select_div {
+      background-color: hsl(213, 19%, 18%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 30px;
+      display: inline-flex;
+    }
+
+    #select_div p {
+      color: hsl(25, 97%, 53%);
+      margin: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  <noscript>turn on JS</noscript>
+
+
+  <div class="construct">
+    <div id="main">
+
+      <div id="star">
+        <img src="images/icon-star.svg" alt="star">
+      </div>
+
+      <h2>How did we do?</h2>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <div class="ratings">
+        <div class="rate">1</div>
+        <div class="rate">2</div>
+        <div class="rate">3</div>
+        <div class="rate">4</div>
+        <div class="rate">5</div>
+      </div>
+
+      <div id="submit"><h3>SUBMIT</h3></div>
+
+    </div>
+
+      <div id="end" style="display: none;">
+
+      <img src="images/illustration-thank-you.svg" alt="thank you" style="margin-bottom: 30px;">
+
+      <div id="select_div">
+      <p>You selected ------ out of 5</p>
+      </div>
+
+      <h2 style="margin-top: 40px;">Thank you!</h2>
+
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!</p>
+
+    </div>
+
+    
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
