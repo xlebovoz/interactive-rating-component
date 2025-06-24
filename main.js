@@ -27,7 +27,11 @@ function go() {
   if (select != 0) {
     document.getElementById('main').style.display = 'none';
     document.getElementById('end').style.display = 'block';
+    a = document.getElementById('select').innerHTML = `You selected ${select} out of 5`;
+    console.log(a)
   } else {
     alert('rate us')
   }
 };
+
+
